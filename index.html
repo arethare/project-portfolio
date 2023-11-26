@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+   <header class="header">
+        <a href="#" class="logo">MyPortfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#project" class="nav-link">Project</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Aretha</h1>
+            <p>I'm a student at SMKN 1 Karawang, majoring in software engineering.</p>
+        </div>  
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-left">
+                <img src="foto_reta.png" alt="foto-reta">
+            </div>
+            <div class="about-right">
+                <h1>ABOUT ME</h1>
+                <p>Hi, my name is Aretha. I study at SMKN 1 Karawang, majoring in software engineering. 
+                    I was born in Karawang on June 19, 2006. My hobbies are listening to music and archery, 
+                    and my favorite music is Last Night on Earth from Green Day.</p>
+                <h1>MY EDUCATION</h1>
+                <p> * 2013 - 2019 SDN NAGASARI 2 KARAWANG<br>
+                    * 2019 - 2022 SMPN 5 KARAWANG BARAT<br>
+                    * 2019 - 2023 SMKN 1 KARAWANG</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <div class="project-container row">
+            <div class="project-box">
+                <h2>Project Pertama</h2>
+                <p>Sosial Media Developer.</p>
+                <a href="https://arethare.github.io/pwb-areeeeeeee/">Click Here</a>
+            </div>
+    
+            <div class="project-box">
+                <h2>Project Kedua</h2>
+                <p>Featured Posts.</p>
+                <a href="https://arethare.github.io/tugas-css-are/">Click Here</a>
+            </div>
+    
+            <div class="project-box">
+                <h2>Project Ketiga</h2>
+                <p>Mini Ecommerce.</p>
+                <a href="https://arethare.github.io/tugas_bootstrap/">Click Here</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" pattern required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" id="submitBtn" value="Submit">
+        </div>      
+    </section>
+
+    <script>
+        function showContent(sectionId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('project').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+    
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var submitBtn = document.getElementById('submitBtn');
+        var nameInput = document.getElementById('name');
+        var emailInput = document.getElementById('email');
+        var messageTextarea = document.getElementById('message');
+
+        submitBtn.addEventListener('click', function () {
+            // Ganti teks tombol saat diklik
+            submitBtn.value = 'Terkirim';
+
+            // Sembunyikan teks di dalam kotak input dan textarea
+            nameInput.value = '';
+            emailInput.value = '';
+            messageTextarea.value = '';
+            });
+        });
+    </script>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
